@@ -1,0 +1,38 @@
+RLS Binary Trial License (Closed Source)
+
+Copyright (c) 2026 RLS authors. All rights reserved.
+
+1. WHAT YOU GET
+   This repository distributes executable binaries and documentation ONLY.
+   No source code is provided, and no open-source license applies.
+
+2. PERMITTED USE (free trial)
+   - You may download, install, and run the provided binaries for
+     evaluation, personal use, and internal commercial evaluation.
+   - You may use RLS with your own code and AI agents locally.
+
+3. RESTRICTIONS
+   - No reverse engineering, decompiling, or disassembling except where
+     expressly permitted by mandatory law.
+   - No redistribution, mirroring, repackaging, or resale of the binaries
+     without prior written permission.
+   - No removal or alteration of copyright / license notices.
+   - No use of the binaries to develop a competing code-search product
+     by extracting behavior at scale (benchmarking for internal
+     evaluation is allowed; publishing comparative claims requires
+     prior notice and reproducible methodology).
+
+4. YOUR CODE STAYS YOURS
+   RLS runs locally by default (127.0.0.1). The licensor does not claim
+   ownership of your source code indexed by the tool.
+
+5. NO WARRANTY
+   Binaries are provided "AS IS", without warranty of any kind.
+   To the maximum extent permitted by law, liability is limited to
+   amounts paid (if any) for the trial version (i.e. zero).
+
+6. ENTERPRISE / INVESTMENT CONTACT
+   For team shared index, on-prem deployment, custom languages, audit,
+   OEM, or investment: see CONTACT.md.
+
+By downloading or running the binaries you accept this license.

@@ -1,0 +1,14 @@
+name: dist-repo-guard
+on: [push, pull_request]
+jobs:
+  guard-no-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if source files are committed
+        run: |
+          if git ls-files | grep -E '\.(rs|py|ts|js|java|go|c|cpp)$' | grep -v -E '^scripts/'; then
+            echo "Source files must not be committed to dist repo."
+            exit 1
+          fi
+          echo "OK: no source files."

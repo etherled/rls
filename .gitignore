@@ -1,0 +1,18 @@
+# Rust build artifacts (should never appear in dist repo)
+/target/
+**/*.rs.bk
+*.pdb
+*.exe
+!scripts/verify-download.ps1
+
+# Release zips are attached to GitHub Releases, not committed
+*.zip
+*.sha256
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
