@@ -40,6 +40,8 @@ Details: [docs/FEATURES.md](docs/FEATURES.md), [docs/BEST-PRACTICES.md](docs/BES
 
 ## Measured results (reproducible)
 
+> Full AI trial walkthrough (in Chinese): [docs/TRIAL-REPORT.md](docs/TRIAL-REPORT.md) — 95-file mixed Rust/Python/TS repo, unknown symbol to def+callers in 3 calls ≈ 80 ms; honest limitations included.
+
 Windows x64, 50 Rust files, 5 warmups, 30 samples (p95):
 
 | Scenario | p95 |

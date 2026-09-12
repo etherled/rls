@@ -42,6 +42,8 @@ RLS 把这条路径收敛成一条：
 
 ## 实测效果（可复现，不是口号）
 
+> 完整 AI 实测过程见 [docs/TRIAL-REPORT.md](docs/TRIAL-REPORT.md)：95 文件 Rust/Python/TS 混合仓，`search→context→ref` 3 步约 80 ms 从未知符号到定义+调用清单；25 文件脏乱仓同名 3 定义一眼分清。缺点也写在里面了，先看再 Star。
+
 Windows x64、50 个 Rust 文件、预热 5 次采样 30 次，一次 p95：
 
 | 场景 | p95 |
