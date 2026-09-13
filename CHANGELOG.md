@@ -2,10 +2,10 @@
 
 格式：`## vX.Y.Z - YYYY-MM-DD` + 变更 + 下载链接 + SHA256。
 
-## v0.1.0 - 待发布
+## v0.1.0 - 2026-09-13
 
 * 首个公开试用包：Windows x64 单文件 `rls.exe`
 * CLI + HTTP MCP（`http://127.0.0.1:8765/`），search / outline / context / trace / handover
 * 8 语言结构化解析：Rust / Python / JS / TS / Go / Java / C / C++
-* 下载：Releases 页 `rls-v0.1.0-windows-x64.zip`
-* SHA256：待发布时填写
+* 下载：本地已打好 `rls-v0.1.0-windows-x64.zip`（5,484,252 字节），等 Phase 5 的 rls.swancat.com 下载页建好后上传，公开仓不放安装包
+* SHA256：`5A9AD85E210FD6A0FB7A640FF76F5C02B6A0020651B27E06B461A25765F71B6E`
