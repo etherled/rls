@@ -41,4 +41,4 @@ Get-FileHash .\rls-v0.1.0-windows-x64.zip -Algorithm SHA256
 
 - [x] 找台干净目录按 README 走一遍 60 秒试用，确认能跑（2026-09-13 干净目录 search/outline/context 全通）
 - [x] 公开仓搜一遍确认无源码、无安装包：只有 README/docs，没有 `crates/`，没有 exe/zip（安装包只放 rls.swancat.com）（2026-09-13 已验，guard.yml 同口径）
-- [ ] 给公开仓 `rls` 点第一个 Star，截个图发社区（待用户手动）
+- [x] 给公开仓 `rls` 点第一个 Star，截个图发社区（2026-09-13 用户已点）
