@@ -63,7 +63,7 @@ Windows x64、50 个 Rust 文件、预热 5 次采样 30 次，一次 p95：
 
 ### 1. 下载
 
-去 [www.swancat.com](https://www.swancat.com) 找下载入口，下载最新 `rls-vX.Y.Z-windows-x64.zip`，解压得到 `rls.exe`（单个文件，无其他依赖）。本仓只放文档，不放安装包。
+去 [rls.swancat.com](https://rls.swancat.com) 下载最新 `rls-vX.Y.Z-windows-x64.zip`（免费，用 Swancat 账号登录），解压得到 `rls.exe`（单个文件，无其他依赖）。本仓只放文档，不放安装包。
 
 校验（SHA256 见下载页，公仓 [CHANGELOG.md](CHANGELOG.md) 同步记录）：
 

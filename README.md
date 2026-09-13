@@ -57,7 +57,7 @@ Token estimate on fixed tasks: search+reads −84.5%, overview −85.9%, deep in
 
 ## Quickstart
 
-1. Get `rls-vX.Y.Z-windows-x64.zip` via the download link at [www.swancat.com](https://www.swancat.com), unzip to get single-file `rls.exe`. (Docs only in this repo, no binaries.)
+1. Get `rls-vX.Y.Z-windows-x64.zip` at [rls.swancat.com](https://rls.swancat.com) (free, login with your Swancat account), unzip to get single-file `rls.exe`. (Docs only in this repo, no binaries.)
 2. Verify SHA256 published on the download page (also recorded in [CHANGELOG.md](CHANGELOG.md)).
 3. CLI: `.\rls.exe --help`, `.\rls.exe doctor --json`.
 4. MCP for AI: `.\rls.exe install`, `.\rls.exe service start`, endpoint `http://127.0.0.1:8765/`.

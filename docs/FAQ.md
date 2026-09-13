@@ -7,7 +7,7 @@ A：不开源。本仓只有文档（docs-only），不放源码也不放安装�
 A：不会。默认 `127.0.0.1`，索引在本地。配置在 `%APPDATA%\rls\config.toml`（Win）/ `~/.config/rls`（Linux）等。
 
 **Q：怎么装？**
-A：www.swancat.com 下载入口下 zip → 解压得 `rls.exe` → `.\rls.exe install` → `.\rls.exe service start` → `.\rls.exe status --json`。MCP 地址 `http://127.0.0.1:8765/`。
+A：rls.swancat.com 登录下载 zip → 解压得 `rls.exe` → `.\rls.exe install` → `.\rls.exe service start` → `.\rls.exe status --json`。MCP 地址 `http://127.0.0.1:8765/`。
 
 **Q：Claude Code / Codex 怎么接？**
 A：`codex mcp get rls --json` / `claude mcp get rls` 检查；`install` 会尝试写用户级 MCP 条目，失败就手工按下址添加。
