@@ -5,7 +5,7 @@
 *.exe
 !scripts/verify-download.ps1
 
-# Release zips are attached to GitHub Releases, not committed
+# Packages are served via rls.swancat.com (Phase 5), never committed
 *.zip
 *.sha256
 
