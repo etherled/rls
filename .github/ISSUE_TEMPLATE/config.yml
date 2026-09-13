@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 商务合作 / Business（不谈价格不接定制的不用点）
+    url: mailto:yyyx@sina.com
+    about: OEM / 捆绑 / 私有部署 / 定制语言 / 投资合作请走邮件，公开 Issue 只收 bug 与功能投票。
