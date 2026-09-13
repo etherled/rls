@@ -113,7 +113,7 @@ claude mcp get rls
 
 * **开源吗？** 不开源。本仓只有二进制与文档，源码在私有仓。许可证见 [LICENSE](LICENSE)。
 * **会上传我的代码吗？** 不会。默认只监听 `127.0.0.1`，索引在本地（`%APPDATA%\rls` / `~/.config/rls` + 本地数据目录）。
-* **支持 macOS/Linux 吗？** 内核跨平台，首发 Windows x64 包，其他平台按需求排期——想要就去 Issue 投票。
+* **支持 macOS/Linux 吗？** 内核跨平台，首发 Windows x64 包，其他平台按需求排期——想要就去 [Issue](https://github.com/etherled/rls/issues) 投票。
 * **和现有 Agent 冲突吗？** 不冲突，它只是 MCP 工具 + CLI，不接管你的 Agent。
 
 更多：[docs/FAQ.md](docs/FAQ.md)
@@ -126,11 +126,11 @@ claude mcp get rls
 * [ ] 更多语言 / 更大仓优化（按 Issue 热度排）
 * [ ] 企业版：团队共享索引、权限、审计、私有部署
 
-想要什么功能？**去 Issue 投票，Star 数 + 真实场景描述决定优先级。**
+想要什么功能？**去 [Issue](https://github.com/etherled/rls/issues) 投票，Star 数 + 真实场景描述决定优先级。**
 
 ## 反馈与商务
 
-* Bug / 场景 / 语言支持请求 → GitHub Issue（请贴 `rls doctor --json` + 最小复现步骤，不要贴涉密代码）
+* Bug / 场景 / 语言支持请求 → [GitHub Issue](https://github.com/etherled/rls/issues)（请贴 `rls doctor --json` + 最小复现步骤，不要贴涉密代码）
 * 企业合作 / 投资 / 大客户定制 → [CONTACT.md](CONTACT.md)，附上你的仓规模、语言、Agent 类型，我们单独聊。
 
 ---

@@ -68,7 +68,7 @@ Structured languages: Rust, Python, JavaScript, TypeScript, Go, Java, C, C++. Ot
 
 * **Open source?** No. Binary + docs only. See [LICENSE](LICENSE).
 * **Does it upload my code?** No. Listens on `127.0.0.1` by default, index stays local.
-* **macOS/Linux?** Core is cross-platform; Windows x64 ships first. Vote in Issues.
+* **macOS/Linux?** Core is cross-platform; Windows x64 ships first. Vote in [Issues](https://github.com/etherled/rls/issues).
 * **Conflicts with my agent?** No, it is just an MCP tool + CLI.
 
 More: [docs/FAQ.md](docs/FAQ.md), comparisons: [docs/COMPARISON.md](docs/COMPARISON.md).
