@@ -1,8 +1,18 @@
 # RLS · Let AI read 90% less code, every hit verifiable
 
+![token −91.3%*](https://img.shields.io/badge/token-%E2%88%9291.3%25*-brightgreen) ![local only](https://img.shields.io/badge/local-zero_upload-blue) ![MCP](https://img.shields.io/badge/MCP-Claude_Code_%7C_Codex-purple) ![warm query p95](https://img.shields.io/badge/warm_query_p95-~20ms-orange)
+
+> AI reads projects via grep + full-file reads — most tokens wasted on redundant code. RLS retrieves structured slices locally, so only the necessary snippets reach the AI: **−91.3% total tokens on fixed sample tasks** ([how it was measured](docs/BENCHMARKS.md); reference magnitude, not a promise).
+
 > **Binary-only distribution (no source)** · 中文版：[README.zh-CN.md](README.zh-CN.md) · Free trial · Windows x64 first
 >
-> RLS (Rust Local Search) runs locally: **one `rls.exe`, two interfaces** — humans use the CLI, AI agents (Claude Code / Codex, …) use HTTP MCP against the same index and result semantics.
+> RLS (Rust Local Search) runs locally, **built for AI agents first**: plug it into Claude Code / Codex once via MCP and the agent locates symbols and traces call paths itself instead of being fed whole files and directories. That self-serve lookup is where the −90% comes from. Humans get the same power in the terminal via CLI — same index, same result semantics.
+
+## 🔒 Privacy: local only
+
+- Runs 100% on your machine: code and index never leave it. The index lives on your own disk — nothing is uploaded, ever.
+- Listens on `127.0.0.1` by default. No telemetry, no auto-update checks, no outbound requests.
+- Single binary; the optional local service binds loopback too. Verify it all with a packet capture or firewall.
 
 ```powershell
 # 60-second trial
@@ -57,10 +67,12 @@ Token estimate on fixed tasks: search+reads −84.5%, overview −85.9%, deep in
 
 ## Quickstart
 
+![real rls search output (trimmed)](docs/images/demo-search.svg)
+
 1. Get `rls-vX.Y.Z-windows-x64.zip` at [rls.swancat.com](https://rls.swancat.com) (free, login with your Swancat account), unzip to get single-file `rls.exe`. (Docs only in this repo, no binaries.)
 2. Verify SHA256 published on the download page (also recorded in [CHANGELOG.md](CHANGELOG.md)).
 3. CLI: `.\rls.exe --help`, `.\rls.exe doctor --json`.
-4. MCP for AI: `.\rls.exe install`, `.\rls.exe service start`, endpoint `http://127.0.0.1:8765/`.
+4. MCP for AI (primary — this is what the agent calls): `.\rls.exe install`, `.\rls.exe service start`, endpoint `http://127.0.0.1:8765/`.
 
 Structured languages: Rust, Python, JavaScript, TypeScript, Go, Java, C, C++. Others remain text-searchable.
 

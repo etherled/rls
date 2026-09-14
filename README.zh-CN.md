@@ -1,8 +1,12 @@
 # RLS · 让 AI 少读 90% 代码，找到的每一行都能核对
 
+![token −91.3%*](https://img.shields.io/badge/token-%E2%88%9291.3%25*-brightgreen) ![本地零上传](https://img.shields.io/badge/local-zero_upload-blue) ![MCP](https://img.shields.io/badge/MCP-Claude_Code_%7C_Codex-purple) ![暖查 p95](https://img.shields.io/badge/warm_query_p95-~20ms-orange)
+
+> AI 读项目 = grep + 逐文件通读，大量 Token 全浪费在冗余代码上。RLS 本地结构化检索，只把必要的代码片段发给 AI，固定任务样例实测总 Token 减少 **91.3%**（[怎么测的](docs/BENCHMARKS.md)，参考量级、不是承诺）。
+
 > **二进制分发仓（无源码）** · 英文版：[README.md](README.md) · 免费试用 · Windows x64 优先
 >
-> RLS（Rust Local Search）是本地运行的代码搜索与结构分析工具：**一个 `rls.exe`，两种用法** —— 人在终端用 CLI，AI（Claude Code / Codex 等）走 HTTP MCP，查的是同一套索引、同一套结果。
+> RLS（Rust Local Search）是**专为 AI 设计**的本地代码搜索：给 Claude Code / Codex 接一次 MCP，AI 读项目不再整文件整目录地喂，它自己调用 RLS 精准定位符号、追溯调用链，Token 直接砍九成。人也能在终端用 CLI——同一套索引、同一套结果。
 
 ```powershell
 # 60 秒试用
@@ -10,6 +14,12 @@
 .\rls.exe outline D:\your-project\src --max-files 50
 .\rls.exe context D:\your-project\src\retry.py 45
 ```
+
+## 🔒 隐私承诺：只在本地
+
+- 100% 本地运行，代码和索引都不离开你的电脑。索引只存在你自己的磁盘上，从不上传。
+- 默认只监听 `127.0.0.1`。无遥测、无自动更新检查、无外发请求。
+- 单个二进制文件；可选的本地后台服务同样只绑回环地址。抓包、防火墙随便验。
 
 ⭐ 如果它帮你省了 token / 省了翻文件的时间，请给个 Star —— 这是闭源项目唯一的公开反馈通道。
 🐟 企业版 / 私有部署 / 定制语言支持：见 [CONTACT.md](CONTACT.md)。
@@ -61,6 +71,8 @@ Windows x64、50 个 Rust 文件、预热 5 次采样 30 次，一次 p95：
 
 ## 3 分钟上手
 
+![真实 rls search 输出（有删节）](docs/images/demo-search.svg)
+
 ### 1. 下载
 
 去 [rls.swancat.com](https://rls.swancat.com) 下载最新 `rls-vX.Y.Z-windows-x64.zip`（免费，用 Swancat 账号登录），解压得到 `rls.exe`（单个文件，无其他依赖）。本仓只放文档，不放安装包。
@@ -81,7 +93,9 @@ Get-FileHash .\rls-vX.Y.Z-windows-x64.zip -Algorithm SHA256
 .\rls.exe doctor --json
 ```
 
-### 3. 给 AI 用（HTTP MCP）
+### 3. 给 AI 用（HTTP MCP，核心用法）
+
+RLS 是专为 AI 做的：接上之后，AI 读项目不用你整文件喂，它会自己调 RLS 查符号、追调用链——上面演示的就是 AI 每次调用看到的东西。
 
 ```powershell
 .\rls.exe install
