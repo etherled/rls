@@ -1,0 +1,3 @@
+# Docs-only repo: no source ships here (source lives in a private repo).
+# Keep the helper script out of the language bar so it doesn't mislead.
+scripts/* linguist-vendored
