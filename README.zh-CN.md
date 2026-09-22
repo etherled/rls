@@ -69,6 +69,10 @@ Windows x64、50 个 Rust 文件、预热 5 次采样 30 次，一次 p95：
 
 设计依据：33 个真实会话、11,560 次工具调用分析，Read+Grep 占约 50% token，典型浪费就是 Grep→Read×N（317 次）。语义/向量搜索使用率仅 0.9%，所以 RLS 选了**精确搜索 + AST 调用图**，不要 embedding、不要模型服务。见 [docs/WHY-RLS.md](docs/WHY-RLS.md)。
 
+## 兼容性实战记录
+
+> RLS 工具已在多轮 agent 会话里当工具面实测过抗压：见 [XiaomiMiMo/MiMo#98](https://github.com/XiaomiMiMo/MiMo/issues/98) —— `mimo-v2.6-pro` 单轮打出 120 个并行调用、同一无效调用无视报错原文连发 13 遍、两次刷到 `repetition_truncation`，同工具面下其他模型最差只是写错参数。已作为模型侧问题上报；RLS 侧契约（description、错误码、`next_cursor` 续查）已验证完整送达。
+
 ## 3 分钟上手
 
 ![真实 rls search 输出（有删节）](docs/images/demo-search.svg)

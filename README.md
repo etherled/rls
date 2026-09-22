@@ -65,6 +65,10 @@ Windows x64, 50 Rust files, 5 warmups, 30 samples (p95):
 
 Token estimate on fixed tasks: search+reads −84.5%, overview −85.9%, deep inspect −95.0%, total −91.3%. **Magnitude reference, not a promise.** Repro: [docs/BENCHMARKS.md](docs/BENCHMARKS.md).
 
+## Compatibility field note
+
+> RLS tools stress-tested live as the tool surface in multi-round agentic sessions: see [XiaomiMiMo/MiMo#98](https://github.com/XiaomiMiMo/MiMo/issues/98) — `mimo-v2.6-pro` emitted 120 parallel calls in one turn, retried an identical invalid call 13× while ignoring the error text that states the fix, and hit `repetition_truncation` twice, while other models on the same surface degraded at worst to a wrong parameter. Filed as a model-side issue; RLS-side contracts (descriptions, error codes, `next_cursor` continuation) verified delivered.
+
 ## Quickstart
 
 ![real rls search output (trimmed)](docs/images/demo-search.svg)
